@@ -1,0 +1,22 @@
+<ion-card class="blade-wrap">
+  <ion-img [src]="data.srcImg"></ion-img>
+  <ion-card-header>
+    <ion-card-subtitle class="ion-no-margin" color="primary">{{
+      data.subTitle
+      }}</ion-card-subtitle>
+    <ion-card-title class="ion-no-margin fs-6">{{ data._id }} - {{ data.title }}</ion-card-title>
+  </ion-card-header>
+  <div class="blade-info">
+    <ion-row class="ion-align-items-center">
+      <ion-col>
+        <ion-icon name="add-circle-outline" size="large" style=" color:#fff"></ion-icon>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-left">
+          <p>novo</p>
+          <p>treino</p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-card>

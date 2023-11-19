@@ -1,0 +1,32 @@
+<div *ngIf="{ 
+    personals: personals$ | async,
+    programas: programas$ | async,
+    conteudos: conteudos$ | async
+} as observbles">
+    <ion-grid class="ion-padding" *ngIf="observbles.personals && observbles.programas && observbles.conteudos">
+        <ion-row>
+            <ion-col>
+                <h1 class="ion-no-margin ion-margin-top ion-margin-start">
+                    personal online
+                    <ion-icon class="ion-margin-topa" name="add-circle-outline" color="primary"></ion-icon>
+                </h1>
+                <app-custom-swiper [data]="observbles.personals" />
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <h1 class="ion-no-margin ion-margin-top ion-margin-start ion-margin-end">
+                    programas
+                    <ion-badge color="primary shadow-primary">novo</ion-badge>
+                </h1>
+                <app-custom-swiper [data]="observbles.programas" />
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <h1 class="ion-no-margin ion-margin-top ion-margin-start">conteúdos</h1>
+                <app-custom-swiper [data]="observbles.conteudos" />
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</div>

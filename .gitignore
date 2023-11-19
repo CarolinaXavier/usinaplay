@@ -47,3 +47,5 @@ package-lock.json
 *.zip
 *.gz
 .nvmrc
+
+/.angular

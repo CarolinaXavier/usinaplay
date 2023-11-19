@@ -1,0 +1,52 @@
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-button fill="clear" (click)="toggleAccordion()">
+      <ion-icon slot="icon-only" name="menu"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+
+  <ion-title class="ion-text-center">
+    <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>
+  </ion-title>
+
+  <ion-buttons slot="end">
+    <div class="notification shadow">
+      <ion-icon name="notifications-outline"></ion-icon>
+    </div>
+    <ion-badge class="custom-ion-badge" [color]="notification ? 'secondary': 'tranparent'"></ion-badge>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-accordion-group #accordionGroup>
+  <ion-accordion class="acordion-container" [value]="wrapper" toggleIconSlot="start">
+    <div class="acordion-wrapper" slot="content">
+
+      <ion-row class="ion-justify-content-start">
+        <div class="profile" *ngIf="user">
+          <ion-avatar class="avatar" slot="start">
+            <img src="{{ user.avatart }}" alt="Avatar" />
+          </ion-avatar>
+          <ion-label class="info">
+            <ion-text>
+              <p class="name">{{ user.name }}</p>
+              <p class="level">{{ user.level }}</p>
+            </ion-text>
+          </ion-label>
+        </div>
+      </ion-row>
+
+      <ion-row class="ion-justify-content-center">
+        <div class="footer-group shadow">
+          <div class="footer-group-item">
+            <ion-icon class="icon" name="body-outline"></ion-icon>
+            <span class="text fs-6">meu corpo</span>
+          </div>
+          <div class="footer-group-item">
+            <ion-icon class="icon" name="trophy-outline"></ion-icon>
+            <span class="text fs-6">objetivos e conquistas</span>
+          </div>
+        </div>
+      </ion-row>
+    </div>
+  </ion-accordion>
+</ion-accordion-group>

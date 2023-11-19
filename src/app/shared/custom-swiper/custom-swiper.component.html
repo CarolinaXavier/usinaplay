@@ -1,0 +1,7 @@
+<div class="swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" *ngFor="let item of data; index as i">
+      <app-custom-card [data]="item" />
+    </div>
+  </div>
+</div>
