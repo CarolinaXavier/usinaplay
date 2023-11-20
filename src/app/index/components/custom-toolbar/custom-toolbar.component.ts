@@ -32,8 +32,6 @@ export class CustomToolbarComponent implements OnInit, AfterViewInit {
   constructor() { }
 
   ngAfterViewInit(): void {
-    /* const nativeEl = this.accordionGroup;
-    nativeEl.value = this.wrapper; */
   }
 
   ngOnInit() { 
@@ -43,7 +41,7 @@ export class CustomToolbarComponent implements OnInit, AfterViewInit {
   }
 
   user = {
-    name: "Leandro Santos",
+    name: "Carolina Xavier",
     level: "Nível Roxo",
     avatart: "assets/img/user.jpg"
   };
