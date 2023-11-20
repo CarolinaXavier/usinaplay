@@ -32,8 +32,8 @@ export class CustomToolbarComponent implements OnInit, AfterViewInit {
   constructor() { }
 
   ngAfterViewInit(): void {
-    const nativeEl = this.accordionGroup;
-    nativeEl.value = this.wrapper;
+    /* const nativeEl = this.accordionGroup;
+    nativeEl.value = this.wrapper; */
   }
 
   ngOnInit() { 
